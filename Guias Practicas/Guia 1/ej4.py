@@ -159,8 +159,8 @@ plt.figure(figsize = (8,6)) #Genero otra ventana
 
 # h = 0.5
 plt.subplot(2,2,1)
-plt.plot(tb1,yb1[:,0],label='Funcion', linestyle='-') #Genero un grafico llamado 'funcion' con linea 'discontinua-punteada' de color 'rojo'
-plt.plot(tb1,yb1[:,1],label='Puntos',linestyle='',marker='o',color='grey') #Genero un grafico llamado 'Puntos', sin linea de color amarillo
+plt.plot(tb1,yb1,label='Funcion', linestyle='-') #Genero un grafico llamado 'funcion' con linea 'discontinua-punteada' de color 'rojo'
+plt.plot(tb1,yb1,label='Puntos',linestyle='',marker='o',color='grey') #Genero un grafico llamado 'Puntos', sin linea de color amarillo
 plt.grid(True,linestyle='-') #Genero una grilla de linea 'punteada', tambien se le puede agregar color
 plt.title('Item "b" con h = 0.5') #Titulo del grafico
 plt.ylabel('Y') #Titulo del eje
