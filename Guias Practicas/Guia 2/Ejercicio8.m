@@ -23,7 +23,16 @@ f = @(t,x) [x(2);-(c/m) * x(2) - (k/m) * x(1)]; % --> El ; me genera una matriz,
 
 x0 = [1;0.5]; % el ; me genera una columna
 % Intervalo de integracion
-intervalo = [0 10];
+intervalo = [0 10]; % intervalo = tspan, que es el tiempo de simulacion
 [t,x] = ode45(f, intervalo, x0);
 
+figure(1)
+plot(t, x(:,1), 'b', 'DisplayName', 'Desplazamiento')
+hold on
+plot(t, x(:,2), 'r--', 'DisplayName', 'Velocidad')
+xlabel('Tiempo (s)')
+ylabel('Respuesta')
+title('Desplazamiento y velocidad del sistema')
+legend
+grid on
 

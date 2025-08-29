@@ -6,8 +6,8 @@ clear
 % Se supone que la poblacion de un pais era de 39,5 millones en el año 2000
 % y que crece siguiendo la ley de Maithus
 % y' = 0.5 * y
-% donde y(t) representa el numero de millones de habitantes en el instante
-% t.
+% donde y(t) representa el numero de millones de habitantes 
+% en el instante t.
 % a) Cuantos millones de habitantes habra en 2010?
 % b) Cuando se alcanzaran los 50 millones de habitantes?
 
