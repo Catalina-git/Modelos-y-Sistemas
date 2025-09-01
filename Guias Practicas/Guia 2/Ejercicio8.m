@@ -30,8 +30,8 @@ figure(1)
 plot(t, x(:,1), 'b', 'DisplayName', 'Desplazamiento')
 hold on
 plot(t, x(:,2), 'r--', 'DisplayName', 'Velocidad')
-xlabel('Tiempo (s)')
-ylabel('Respuesta')
+xlabel('Tiempo [s]')
+ylabel('Solución')
 title('Desplazamiento y velocidad del sistema')
 legend
 grid on

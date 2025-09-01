@@ -23,3 +23,32 @@ clear
 % ni vacian completamente.
 
 
+% Parámetros del sistema
+a1 = 1;           % Área del depósito 1
+a2 = 1;           % Área del depósito 2
+R1 = 2;           % Resistencia entre depósitos
+R2 = 3;           % Resistencia de salida
+caudal_in = 1;    % Caudal de entrada constante
+
+% Sistema de ecuaciones diferenciales
+f = @(t, x) [(1/a1)*(caudal_in - (1/R1)*(x(1) - x(2)));        % dx1/dt
+    (1/a2)*((1/R1)*(x(1) - x(2)) - (1/R2)*x(2))];              % dx2/dt
+
+% Condiciones iniciales
+x0 = [0; 0];  % Ambos depósitos vacíos
+
+% Simulación
+intervalo = [0 50];
+[t, x] = ode45(f, intervalo, x0);
+
+% Gráfico
+figure(1)
+plot(t, x(:,1), 'b', 'LineWidth', 2, 'DisplayName', 'Depósito 1')
+hold on
+plot(t, x(:,2), 'r', 'LineWidth', 2, 'DisplayName', 'Depósito 2')
+xlabel('Tiempo [s]')
+ylabel('Altura del agua')
+legend
+title('Evolución de las alturas del agua en los depósitos')
+grid on
+
